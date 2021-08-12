@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Form</title>
+</head>
+<body>
+    <form method="post">
+        <fieldset>
+            <legend>Add Instrument</legend>
+            <div>
+                <select style="width: 100px" class="form-control" id="InstrumentType" name="InstrumentType">
+                    <option>Guitar</option>
+                    <option>Drums</option>
+                    <option>Violin</option>
+                    <option>Flute</option>
+                </select>
+            </div>
+            <br />
+            <div>
+                <label for="InstrumentBrandName">Brand name:</label>
+                <input type="text" name="InstrumentBrandName" value="" />
+            </div>
+            <br />
+            <div>
+                <label for="InstrumentBrandModel">Brand model:</label>
+                <input type="text" name="InstrumentBrandModel" value="" />
+            </div>
+            <br />
+            <div>
+                <label for="InstrumentType">Type:</label>
+                <input type="text" name="InstrumentType" value="" />
+            </div>
+            <br />
+            <div>
+                <label for="InstrumentCharacteristic">Characteristic:</label>
+                <input type="text" name="InstrumentCharacteristic" value="" />
+            </div>
+            <br />
+            <div>
+                <label for="InstrumentPrice">Price:</label>
+                <input type="text" name="InstrumentPrice" value="" />
+            </div>
+            <br />
+            <div>
+                <label for="InstrumentStock">Stock:</label>
+                <input type="text" name="InstrumentStock" value="" />
+            </div>
+            <br />
+            <div>
+                <label for="InstrumentDescription">Description:</label>
+                <input style="width: 500px; height: 50px" type="text" name="InstrumentDescription" value="" />
+            </div>
+            <br />
+            <div>
+                <label>&nbsp;</label>
+                <p><a class="btn btn-lg btn-warning" role="button" asp-controller="Catalog" asp-action="SaveProduct" asp-route-id="1">Add Product</a></p>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

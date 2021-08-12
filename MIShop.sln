@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIShop", "MIShop\MIShop.csproj", "{E96E5F48-39C9-4106-962C-CCD41E1600FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicData", "MusicData\MusicData.csproj", "{8D12F3C5-3322-40C1-BE35-88C25269958A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicServices", "MusicServices\MusicServices.csproj", "{02486918-B66E-45B1-B75F-1B3FDC7FF4FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E96E5F48-39C9-4106-962C-CCD41E1600FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E96E5F48-39C9-4106-962C-CCD41E1600FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E96E5F48-39C9-4106-962C-CCD41E1600FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E96E5F48-39C9-4106-962C-CCD41E1600FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D12F3C5-3322-40C1-BE35-88C25269958A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D12F3C5-3322-40C1-BE35-88C25269958A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D12F3C5-3322-40C1-BE35-88C25269958A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D12F3C5-3322-40C1-BE35-88C25269958A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02486918-B66E-45B1-B75F-1B3FDC7FF4FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02486918-B66E-45B1-B75F-1B3FDC7FF4FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02486918-B66E-45B1-B75F-1B3FDC7FF4FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02486918-B66E-45B1-B75F-1B3FDC7FF4FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4AE1C1F3-75D2-413D-85D3-9D0F060859DC}
+	EndGlobalSection
+EndGlobal

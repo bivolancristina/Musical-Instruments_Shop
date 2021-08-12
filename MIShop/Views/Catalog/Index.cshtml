@@ -1,0 +1,68 @@
+﻿@model MIShop.Models.CatalogModels.InstrumentIndexModel
+@{
+    ViewData["Title"] = "Catalog";
+}
+
+<div id="assets">
+    <h3>Intruments Catalog</h3>
+    <div id="assetsTable">
+        <table class="table table-condensed" id="catalogIndexTable">
+            <thead>
+                <tr>
+                    <th>
+                        <a asp-controller="Catalog" asp-action="Index">
+                            All products
+                        </a>
+                    </th>
+                    <th>
+                        <a asp-controller="Catalog" asp-action="ShowGuitars">
+                            Guitars
+                        </a>
+                    </th>
+                    <th>
+                        <a asp-controller="Catalog" asp-action="ShowDrums">
+                            Drums
+                        </a>
+                    </th>
+                    <th>
+                        <a asp-controller="Catalog" asp-action="ShowViolins">
+                            Violins
+                        </a>
+                    </th>
+                    <th>
+                        <a asp-controller="Catalog" asp-action="ShowFlutes">
+                            Flutes
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        <table class="table table-condensed" id="catalogIndexTable">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Brand Name</th>
+                    <th>Brand Model</th>
+                    <th>Type</th>
+                    <th>Characteristic</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var asset in Model.Instruments)
+                {
+                    <tr class="assetRow">
+                        <td class="">
+                            <a asp-controller="Catalog" asp-action="Detail" asp-route-id="@asset.Id">
+                                <img src="@asset.ImageUrl" class="imageCell" />
+                            </a>
+                        </td>
+                        <td class="">@asset.BrandName</td>
+                        <td class="">@asset.BrandModel</td>
+                        <td class="">@asset.Type</td>
+                        <td class="">@asset.Characteristic</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

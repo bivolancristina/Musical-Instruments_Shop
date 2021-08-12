@@ -1,0 +1,63 @@
+﻿@model MIShop.Models.CatalogModels.InstrumentDetailModel
+
+<div class="container">
+    <div class="page-header clearfix detailHeadling">
+        <h2 class="text-muted">View Instrument</h2>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-4">
+            <div>
+                <img class="detailImage" src="@Model.ImageUrl" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <p id="itemTitle">@Model.BrandName</p>
+            <p id="itemAuthor">@Model.BrandModel</p>
+
+            @if (Model.Stock == 0)
+            {
+                <p style="color: red; font-size: 15px">This item is out of stock.</p>
+                //<p><a class="btn btn-lg btn-danger" role="button" asp-controller="Catalog" asp-action="MarkFound" asp-route-id="@Model.AssetId">Mark Item Found</a></p>
+            }
+
+            @if (Model.Stock > 0)
+            {
+                <p><a class="btn btn-lg btn-info" role="button" asp-controller="Catalog" asp-action="PlaceOrder" asp-route-id="@Model.AssetId">Place Order</a></p>
+            }
+            @if (User.Identity.IsAuthenticated)
+            {
+                @if (User.IsInRole("Admin"))
+                {
+                    <p><a class="btn btn-lg btn-warning" role="button" asp-controller="Catalog" asp-action="DeleteItem" asp-route-id="@Model.AssetId">Delete Item</a></p>
+                }
+            }
+                </div>
+        <div class="col-md-4 detailInfo">
+            <table>
+                <tr>
+                    <td class="itemLabel">Price: </td>
+                    <td class="itemValue">@Model.Price USD</td>
+                </tr>
+                <tr>
+                    <td class="itemLabel">Description: </td>
+                    <td class="itemValue">@Model.Description</td>
+                </tr>
+                <tr>
+                    <td class="itemLabel">Stock: </td>
+                    <td class="itemValue">@Model.Stock</td>
+                </tr>
+                <tr>
+                    <td class="itemLabel">Type: </td>
+                    <td class="itemValue">@Model.Type</td>
+                </tr>
+                <tr>
+                    <td class="itemLabel">Characteristic: </td>
+                    <td class="itemValue">@Model.Characteristic</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
